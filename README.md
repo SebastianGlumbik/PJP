@@ -7,7 +7,10 @@ at VŠB-TUO. The goal of the course was to get an overview of the area of progra
 Page of the course: http://behalek.cs.vsb.cz/wiki/index.php/Programming_Languages_and_Compilers
 
 ## Prerequisites
-All projects are configured for .NET 8.0. You can download the latest version of .NET from [here](https://dotnet.microsoft.com/download).
+Project is configured for .NET 8.0. You can download the latest version of .NET from [here](https://dotnet.microsoft.com/download).
+
+## How to run
+The easiest way to run the project is to open the solution in IDE (Visual Studio, ...). You need to specify the input file as an argument `--input <file>`. 
 
 ## Project assignment
 Solution contains one project. The application takes an input file and generates output, which is then run by the interpreter.
@@ -58,11 +61,11 @@ Following table defines operators in our expressions. Operator Signature is defi
 | binary arithmetic operators | +, -, *, / | $I \times I \rightarrow I \lor F \times F \rightarrow F$ |
 | modulo                      | %          | $I \times I \rightarrow I$                               |
 | concatenation of strings    | .          | $S \times S \rightarrow S$                               |
-| relational operators        | < >        | $x \times x \rightarrow B,~where~x \in \{I,F\}$          |
-| comparison                  | == !=      | $x \times x \rightarrow B,~where~x \in \{I,F,S\}$        |
+| relational operators        | < >        | $x \times x \rightarrow B,\ where\ x \in \{I,F\}$        |
+| comparison                  | == !=      | $x \times x \rightarrow B,\ where\ x \in \{I,F,S\}$      |
 | logic and, or               | &&, \|\|   | $B \times B \rightarrow B$                               |
 | logic not                   | !          | $B \rightarrow B$                                        |
-| assignment                  | =          | $x \times x \rightarrow x,~where~x \in \{I,F,S,B\}$      |
+| assignment                  | =          | $x \times x \rightarrow x,\ where\ x \in \{I,F,S,B\}$    |
 
 In the assignment, left operand is strictly a variable and the right operand is expression. The type of the variable is the type of the left operand. A side effect is storing the value on the right side into the variable. The automatic conversion cannot change the type of the variable, i.e., it is impossible to store `float` value in `int` variable.
 
